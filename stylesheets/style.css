@@ -1,0 +1,14 @@
+/* temperature converter */
+.cold {
+  color: blue;
+}
+
+.hot{
+  color: red;
+}
+
+.normal {
+  color: green;
+}
+
+/* ===================== */
