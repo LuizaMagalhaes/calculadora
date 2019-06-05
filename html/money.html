@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <div class="container">
+   <h2>Conversor de moedas</h2>
+   <form class="form-inline">
+     <div class="form-group mb-2">
+        <input type="number" class="form-control" id="amount"/>
+     </div>
+     <div class="form-group mx-sm-3 mb-2">
+        <select class="form-control" id="currency-1" required>
+          <option>BRL</option>
+          <option>EUR</option>
+          <option>USD</option>
+        </select>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label>converta para: </label>
+        <select class="form-control" id="currency-2" required>
+          <option>EUR</option>
+          <option>USD</option>
+          <option>BRL</option>
+        </select>
+      </div>
+      <button class="btn calculate-btn btn-primary mb-2">Resultado!</button>
+    </form>
+    <div class="result">
+      <p>
+        <span class="given-amount"></span>
+        <span class="base-currency"></span>
+        <span class="final-result"></span>
+        <span class="second-currency"></span>
+      </p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../scripts/money.js"></script>

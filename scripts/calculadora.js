@@ -23,8 +23,8 @@ var actionHandlers = {
     return parseInt(first) / parseInt(second);
   },
 
-  pow: function(first) {
-    return Math.pow(first, 2);
+  percentage: function(first, second) {
+    return (first / 100) * second;
   },
 
   sqrt: function(first) {
@@ -57,7 +57,7 @@ keyboard.addEventListener("click", function(event) {
     return;
   }
 
-  if (actionType == "pow" || actionType == "sqrt") {
+  if (actionType == "sqrt") {
     var value = inputField.textContent;
     selectedAction = actionHandlers[actionType];
     inputField.textContent = selectedAction(value);

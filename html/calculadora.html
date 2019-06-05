@@ -2,16 +2,21 @@
 <html>
 	<head>
 	<title>Calculator</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/calculadora.css"/>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/calculadora.css"/>
 	</head>
 	<body>
 		<div class="container">
+			<div class="container2">
+				<p>Conversores:</p>
+				<button class="option-button" onclick="location.href='converter.html'">Unidades</button>
+				<button class="option-button" onclick="location.href='money.html'">Moedas</button>
+			</div>
 			<div id="input-field"></div>
 			<div id="keyboard">
 				<div class="buttons-row">
 					<button  data-action="clear" class="calc-button">C</button>
 					<button data-action="sqrt" class="calc-button">&radic;</button>
-					<button data-action="pow" class="calc-button">x<sup>2</sup></button>
+					<button data-action="percentage" class="calc-button">%</button>
 					<button data-action="back" class="calc-button">del</button>
 				</div>
 				<div class="buttons-row">
@@ -25,20 +30,24 @@
 					<button  class="calc-button">5</button>
 					<button  class="calc-button">6</button>
 					<button data-action="mult" class="calc-button">*</button>
+
 				</div>
 				<div class="buttons-row">
 					<button  class="calc-button">1</button>
 					<button  class="calc-button">2</button>
 					<button  class="calc-button">3</button>
 					<button data-action="plus" class="calc-button">+</button>
+
 				</div>
 				<div class="buttons-row">
 					<button data-action="result" class="calc-button">=</button>
 					<button  class="calc-button">0</button>
 					<button class="calc-button">.</button>
 					<button data-action="minus" class="calc-button">-</button>
+
 				</div>
 			</div>
-		<script type="text/javascript" src="calculator.js"></script>
+		</div>
+		<script type="text/javascript" src="../scripts/calculadora.js"></script>
 	</body>
 </html>
