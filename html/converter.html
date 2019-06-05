@@ -1,146 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport"  content="width=device-width, initial-scale=1">
-<title>UNIVERSAL CONVERTER </title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"  content="width=device-width, initial-scale=1">
+		<title>UNIVERSAL CONVERTER </title>
+	</head>
 	<script type="text/javascript" src="../scripts/converter.js"></script>
 	<link rel="stylesheet" type="text/css" href="../stylesheets/converter.css">
-<body>
-<br>
- <!--BEGINNING OF TEMP CONVERSION-->
-	 <center>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/calculator.css">
+	<body>
+		<br>
+	 	<center>
+			<nav>
+				<form>
+					<button class="option-button" onclick="location.href='calculator.html'">Inicio</button>
+					<h1><b>TEMPERATURA</b></h1>
+					<select id="boxa" onchange="clrs()">
+						<option>Celsius</option>
+						<option>Fahrenheit</option>
+					</select> &nbsp; &nbsp;
+						<input type="number" id="maininput" onkeyup="now()">
+					<br><br>
+					<select id="boxb" onchange="clrs()">
+						<option>Celsius</option>
+						<option>Fahrenheit</option>
+					</select> &nbsp; &nbsp;
+					<input disabled="" id="result"><br><br><br>
+					<button type="button" id="converter" onclick="now()"> Converta</button>
+				</form>
+			</nav>
+		<center>
+
 		<nav>
+	 		<h1><b>Outros conversores</b></h1>
 			<form>
-			 	<h1><b>TEMPERATURE CONVERTER</b></h1>
-			<!--BOX ONE-->
-				<select id="boxa" onchange="clrs()">
-					<option>Celsius</option>
-					<option>Fahrenheit</option>
-				</select> &nbsp; &nbsp;
-					<!--MAIN INPUT-->
-					<input type="number" id="maininput" onkeyup="now()">
-				<br><br>
-			<!--BOX TWO-->
-				<select id="boxb" onchange="clrs()">
-					<option>Celsius</option>
-					<option>Fahrenheit</option>
-				</select> &nbsp; &nbsp;
-				<!--RESULT BOX-->
-				<input disabled="" id="result"><br><br><br>
-				<!--CONVERT BUTTON-->
-				<button type="button" id="converter" onclick="now()"> Convert Now </button>
-		</form>
-	</nav>
+				<div class="instruction"><b>Por favor selecione o conversor abaixo</b></div>
+					<select  id="head" onchange="showdistanceoptions()">
+						<option id="sele">SELECT</option>
+						<option id="distance">DISTANCIA</option>
+						<option id="Temperature">TEMPERATURA</option>
+						<option id="weight">PESO</option>
 
+					</select>
+					<br><br>
+					<div id="dist" style="display:  none">
+						<select id="dista" onchange="distnow()">
+							<option>Kilometro</option>
+							<option>Metro</option>
+							<option>Centimetro</option>
+						</select>
+						<input type="number" id="dinput" onkeyup="distnow()"> <br><br>
 
-<!--MANY CONVERSION OPTION-->
-<br><br><br>
-<!--CONVERSION TYPE-->
-	<center>
-		<nav>
-	 		<h1><b>UNIVERSAL CONVERTER</b></h1>
-			<form>
-				<div class="instruction"><b>Please select a category in the select box below</b></div>
-				<select  id="head" onchange="showdistanceoptions()">
-					<option id="sele">SELECT</option>
-					<option id="distance">DISTANCE</option>
-					<option id="Temperature">TEMPERATURE</option>
-					<option id="weight">WEIGHT</option>
+						<select id=distb onchange="distnow()">
+							<option>Kilometro</option>
+							<option>Metro</option>
+							<option>Centimetro</option>
+						</select>
+						<input disabled="" id="dresult">
 
-				</select>
-				<br><br>
-			<!--DISTANCE DIV-->
-			<div id="dist" style="display:  none">
-			<!--Distance input options-->
-				<select id="dista" onchange="distnow()">
-					<option>Kilometer</option>
-					<option>Meter</option>
-					<option>Centimeter</option>
-				</select>
-		<!--Distance input box-->
-				<input type="number" id="dinput" onkeyup="distnow()"> <br><br>
+						<br>
+						<button type="button" onclick="distnow()">Converta!</button>
+					</div>
 
-		<!--Distance output options-->
-				<select id=distb onchange="distnow()">
-					<option>Kilometer</option>
-					<option>Meter</option>
-					<option>Centimeter</option>
-				</select>
-		<!--Distance Result box-->
-				<input disabled="" id="dresult">
-
-			<br><br><br>
-		    	<button type="button" onclick="distnow()">Convert Now!</button>
-			</div>
-
-		<!--TEMPERATURE DIV-->
-			<div id="temp" style="display: none">
-
-				<!--Temperature input options-->
+					<div id="temp" style="display: none">
 						<select id="tempa"  onchange="tempnow()">
 							<option>Celsius</option>
 							<option>Fahrenheit</option>
 						</select>
-				<!--Temperature input box-->
 						<input type="number" id="tinput" onkeyup="tempnow()"> <br><br>
 
-				<!--Temperature output options-->
 						<select id="tempb" onchange="tempnow()" >
 							<option>Celsius</option>
 							<option>Fahrenheit</option>
 						</select>
-				<!--Temperature Result box-->
 						<input disabled="" id="tresult">
-
-					<!--BEGINNING OF SCRIPT CODE FOR CONVERSION OF TEMPERATURE-->
-					<br><br><br>
-				    	<button type="button" onclick="tempnow()">Convert Now!</button>
-			</div>
-
-		<!-- CUTRRENCY DIV-->
-			<div id="money"  class="mn" style="display: none">
-
-			<!--Currency input options-->
-				<div class="rte">
-						<input type="number" name="" id="lrate" placeholder="Please enter Local rate">
-						<input type="number" name="" id="frate" placeholder="Please enter Foreign rate">
-				</div>
-				<div class="amt">
-					<!-- local box-->
-						<input type="number"  placeholder="Local Amount" id="lamount" title="Please enter Local Amount">
-					<!-- Foreign box-->
-						<input type="number"  placeholder="Foreign Amount"  id="famount"  title="Please enter Foreign Amount">
-				</div>
 						<br>
-			   	 <button type="button" onclick="mnynow()">Convert Now!</button>
-			</div>
+						<button type="button" onclick="tempnow()">Converta</button>
+					</div>
 
-			<!--WEIGHT DIV-->
-			<div id="mass" style="display: none">
-		<!--Weight input options-->
-				<select id="massa" onchange="massnow()">
-					<option>Tone</option>
-					<option>Kilogram</option>
-					<option>Gram</option>
-				</select>
-		<!--Weight input box-->
-				<input type="number" id="minput" onkeyup="massnow()"> <br><br>
+					<div id="mass" style="display: none">
+						<select id="massa" onchange="massnow()">
+							<option>Tonelada</option>
+							<option>Kilograma</option>
+							<option>Grama</option>
+						</select>
+						<input type="number" id="minput" onkeyup="massnow()"> <br><br>
 
-		<!--Weight output options-->
-				<select id="massb" onchange="massnow()">
-					<option>Tone</option>
-					<option>Kilogram</option>
-					<option>Gram</option>
-				</select>
-		<!--Weight Result box-->
-				<input disabled="" id="mresult"><br><br><br>
-		    <button type="button" onclick="massnow()">Convert Now!</button>
-			</div>
-		    </form>
-		</nav>
-	</center>
-</body>
+						<select id="massb" onchange="massnow()">
+							<option>Tonelada/option>
+							<option>Kilograma</option>
+							<option>Grama</option>
+						</select>
+						<input disabled="" id="mresult"><br><br><br>
+						<button type="button" onclick="massnow()">Converta</button>
+					</div>
+				</form>
+			</nav>
+		</center>
+	</body>
 </html>
 
