@@ -35,22 +35,33 @@ function showdistanceoptions() {
     document.getElementById("temp").style.display = "none";
     document.getElementById("mass").style.display = "none";
     document.getElementById("dist").style.display = "block";
+    document.getElementById("time").style.display = "none";
   }
   if (option == "TEMPERATURA") {
     document.getElementById("dist").style.display = "none";
     document.getElementById("mass").style.display = "none";
     document.getElementById("temp").style.display = "block";
+    document.getElementById("time").style.display = "none";
   }
-  
+
   if (option == "PESO") {
     document.getElementById("dist").style.display = "none";
     document.getElementById("temp").style.display = "none";
     document.getElementById("mass").style.display = "block";
+    document.getElementById("time").style.display = "none";
+  }
+
+  if (option == "TEMPO") {
+    document.getElementById("dist").style.display = "none";
+    document.getElementById("temp").style.display = "none";
+    document.getElementById("mass").style.display = "none";
+    document.getElementById("time").style.display = "block";
   }
   if (option == "SELECT") {
     document.getElementById("dist").style.display = "none";
     document.getElementById("temp").style.display = "none";
     document.getElementById("mass").style.display = "none";
+    document.getElementById("time").style.display = "none";
     alert("Please select an option to be converted in the select box");
   }
 }
@@ -141,7 +152,7 @@ function massnow() {
     mresult.value = parseFloat(parseFloat(minput.value) * 1000000) + "g";
   }
 
-  //kilograma
+  //kilogram
 
   if (one == "Kilograma" && two == "Tonelada") {
     mresult.value = parseFloat(parseFloat(minput.value) * 0.001) + "tn";
@@ -164,5 +175,45 @@ function massnow() {
   if (minput.value == "") {
     alert("Please enter a valid number value to be converted");
     mresult.value = "";
+  }
+}
+
+// time
+function timenow() {
+  var one, two;
+  one = timea.value;
+  two = timeb.value;
+  tmresult.value = "";
+  tminput.focus();
+
+  //Beginning of hours
+  if (one == "Hora" && two == "Minuto") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) * 60) + "min";
+  }
+
+  if (one == "Hora" && two == "Segundo") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) * 3600) + "sec";
+  }
+  // minutes
+  if (one == "Minuto" && two == "Hora") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) / 60) + "h";
+  }
+
+  if (one == "Minuto" && two == "Segundo") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) * 60) + "sec";
+  }
+
+  // seconds
+  if (one == "Segundo" && two == "Hora") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) / 3600) + "sec";
+  }
+
+  if (one == "Segundo" && two == "Minuto") {
+    tmresult.value = parseFloat(parseFloat(tminput.value) / 60) + "h";
+  }
+
+  if (tminput.value == "") {
+    alert("Please enter a valid number value to be converted");
+    tmresult.value = "";
   }
 }

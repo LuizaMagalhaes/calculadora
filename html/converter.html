@@ -40,6 +40,7 @@
 						<option id="distance">DISTANCIA</option>
 						<option id="Temperature">TEMPERATURA</option>
 						<option id="weight">PESO</option>
+						<option id="weight">TEMPO</option>
 					</select>
 					<br><br>
 					<!-- distancia -->
@@ -63,6 +64,29 @@
 
 						<button class="option-button" type="button" onclick="distnow()">Converta!</button>
 					</div>
+
+					<!-- Tempo -->
+					<div id="time" style="display:  none">
+						<select  class="select-style" id="timea" onchange="timenow()">
+							<option>Hora</option>
+							<option>Minuto</option>
+							<option>Segundo</option>
+						</select>
+
+						<input class= "inputs" type="number" id="tminput" onkeyup="timenow()"> <br><br>
+
+						<select  class="select-style" id=timeb onchange="timenow()">
+							<option>Hora</option>
+							<option>Minuto</option>
+							<option>Segundo</option>
+						</select>
+						<input class= "inputs" disabled="" id="tmresult">
+
+						<br><br><br>
+
+						<button class="option-button" type="button" onclick="timenow()">Converta!</button>
+					</div>
+
 					<!-- temperatura -->
 					<div id="temp" style="display: none">
 						<select  class="select-style" id="tempa"  onchange="tempnow()">
@@ -79,6 +103,7 @@
 						<br>
 						<button class="option-button" type="button" onclick="tempnow()">Converta</button>
 					</div>
+
 					<!-- peso -->
 					<div id="mass" style="display: none">
 						<select  class="select-style" id="massa" onchange="massnow()">
