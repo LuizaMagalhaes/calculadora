@@ -31,33 +31,24 @@ var option;
 // DISTANCE FUNCTION
 function showdistanceoptions() {
   option = head.value;
-  if (option == "DISTANCE") {
+  if (option == "DISTANCIA") {
     document.getElementById("temp").style.display = "none";
-    document.getElementById("money").style.display = "none";
     document.getElementById("mass").style.display = "none";
     document.getElementById("dist").style.display = "block";
   }
-  if (option == "TEMPERATURE") {
+  if (option == "TEMPERATURA") {
     document.getElementById("dist").style.display = "none";
     document.getElementById("mass").style.display = "none";
-    document.getElementById("money").style.display = "none";
     document.getElementById("temp").style.display = "block";
   }
-  if (option == "CURRENCY") {
+  
+  if (option == "PESO") {
     document.getElementById("dist").style.display = "none";
-    document.getElementById("mass").style.display = "none";
-    document.getElementById("temp").style.display = "none";
-    document.getElementById("money").style.display = "block";
-  }
-  if (option == "WEIGHT") {
-    document.getElementById("dist").style.display = "none";
-    document.getElementById("money").style.display = "none";
     document.getElementById("temp").style.display = "none";
     document.getElementById("mass").style.display = "block";
   }
   if (option == "SELECT") {
     document.getElementById("dist").style.display = "none";
-    document.getElementById("money").style.display = "none";
     document.getElementById("temp").style.display = "none";
     document.getElementById("mass").style.display = "none";
     alert("Please select an option to be converted in the select box");
@@ -72,35 +63,35 @@ function distnow() {
   dresult.value = "";
   dinput.focus();
 
-  //Beginning of Kilometer
-  if (one == "Kilometer" && two == "Kilometer") {
+  //Beginning of Kilometro
+  if (one == "Kilometro" && two == "Kilometro") {
     dresult.value = parseFloat(dinput.value) + "km";
   }
 
-  if (one == "Kilometer" && two == "Meter") {
+  if (one == "Kilometro" && two == "Metro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 1000) + "m";
   }
 
-  if (one == "Kilometer" && two == "Centimeter") {
+  if (one == "Kilometro" && two == "Centimetro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 100000) + "cm";
   }
 
-  //Beginning of Meter
+  //Beginning of Metro
 
-  if (one == "Meter" && two == "Kilometer") {
+  if (one == "Metro" && two == "Kilometro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 0.001) + "km";
   }
 
-  if (one == "Meter" && two == "Centimeter") {
+  if (one == "Metro" && two == "Centimetro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 100) + "cm";
   }
 
-  //Beginning of Centimeter
-  if (one == "Centimeter" && two == "Kilometer") {
+  //Beginning of Centimetro
+  if (one == "Centimetro" && two == "Kilometro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 0.00001) + "km";
   }
 
-  if (one == "Centimeter" && two == "Meter") {
+  if (one == "Centimetro" && two == "Metro") {
     dresult.value = parseFloat(parseFloat(dinput.value) * 0.01) + "m";
   }
 
@@ -142,31 +133,31 @@ function massnow() {
   result.value = "";
   minput.focus();
 
-  if (one == "Tone" && two == "Kilogram") {
+  if (one == "Tonelada" && two == "Kilograma") {
     mresult.value = parseFloat(parseFloat(minput.value) * 1000) + "Kg";
   }
 
-  if (one == "Tone" && two == "Gram") {
+  if (one == "Tonelada" && two == "Grama") {
     mresult.value = parseFloat(parseFloat(minput.value) * 1000000) + "g";
   }
 
-  //kilogram
+  //kilograma
 
-  if (one == "Kilogram" && two == "Tone") {
+  if (one == "Kilograma" && two == "Tonelada") {
     mresult.value = parseFloat(parseFloat(minput.value) * 0.001) + "tn";
   }
 
-  if (one == "Kilogram" && two == "Gram") {
+  if (one == "Kilograma" && two == "Grama") {
     mresult.value = parseFloat(parseFloat(minput.value) * 1000) + "g";
   }
 
   //gram
 
-  if (one == "Gram" && two == "Kilogram") {
+  if (one == "Grama" && two == "Kilograma") {
     mresult.value = parseFloat(parseFloat(minput.value) * 0.001) + "kg";
   }
 
-  if (one == "Gram" && two == "Tone") {
+  if (one == "Grama" && two == "Tonelada") {
     mresult.value = parseFloat(parseFloat(minput.value) * 0.000001) + "tn";
   }
 

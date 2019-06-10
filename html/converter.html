@@ -12,87 +12,89 @@
 		<br>
 	 	<center>
 			<nav>
+				<button class="option-button" onclick="location.href='calculator.html'">Inicio</button>
 				<form>
-					<button class="option-button" onclick="location.href='calculator.html'">Inicio</button>
-					<h1><b>TEMPERATURA</b></h1>
-					<select id="boxa" onchange="clrs()">
+					<h3>Temperatura</h3>
+					<select  class="select-style" id="boxa" onchange="clrs()">
 						<option>Celsius</option>
 						<option>Fahrenheit</option>
 					</select> &nbsp; &nbsp;
-						<input type="number" id="maininput" onkeyup="now()">
-					<br><br>
-					<select id="boxb" onchange="clrs()">
+						<input class= "inputs" type="number" id="maininput" onkeyup="now()">
+					<select  class="select-style" id="boxb" onchange="clrs()">
 						<option>Celsius</option>
 						<option>Fahrenheit</option>
 					</select> &nbsp; &nbsp;
-					<input disabled="" id="result"><br><br><br>
-					<button type="button" id="converter" onclick="now()"> Converta</button>
+					<input class= "inputs" disabled="" id="result">
+					<button class="option-button" type="button" id="converter" onclick="now()"> Converta</button>
 				</form>
 			</nav>
-		<center>
+			<br><br><br>
 
-		<nav>
-	 		<h1><b>Outros conversores</b></h1>
-			<form>
-				<div class="instruction"><b>Por favor selecione o conversor abaixo</b></div>
-					<select  id="head" onchange="showdistanceoptions()">
+		<center>
+			<nav>
+				<h3>Outros conversores</h3>
+				<form>
+					<div class="instruction">Por favor selecione o conversor abaixo</div>
+					<select  class="select-style"  id="head" onchange="showdistanceoptions()">
 						<option id="sele">SELECT</option>
 						<option id="distance">DISTANCIA</option>
 						<option id="Temperature">TEMPERATURA</option>
 						<option id="weight">PESO</option>
-
 					</select>
 					<br><br>
+					<!-- distancia -->
 					<div id="dist" style="display:  none">
-						<select id="dista" onchange="distnow()">
+						<select  class="select-style" id="dista" onchange="distnow()">
 							<option>Kilometro</option>
 							<option>Metro</option>
 							<option>Centimetro</option>
 						</select>
-						<input type="number" id="dinput" onkeyup="distnow()"> <br><br>
 
-						<select id=distb onchange="distnow()">
+						<input class= "inputs" type="number" id="dinput" onkeyup="distnow()"> <br><br>
+
+						<select  class="select-style" id=distb onchange="distnow()">
 							<option>Kilometro</option>
 							<option>Metro</option>
 							<option>Centimetro</option>
 						</select>
-						<input disabled="" id="dresult">
+						<input class= "inputs" disabled="" id="dresult">
 
-						<br>
-						<button type="button" onclick="distnow()">Converta!</button>
+						<br><br><br>
+
+						<button class="option-button" type="button" onclick="distnow()">Converta!</button>
 					</div>
-
+					<!-- temperatura -->
 					<div id="temp" style="display: none">
-						<select id="tempa"  onchange="tempnow()">
+						<select  class="select-style" id="tempa"  onchange="tempnow()">
 							<option>Celsius</option>
 							<option>Fahrenheit</option>
 						</select>
-						<input type="number" id="tinput" onkeyup="tempnow()"> <br><br>
+						<input class= "inputs" type="number" id="tinput" onkeyup="tempnow()"> <br><br>
 
-						<select id="tempb" onchange="tempnow()" >
+						<select  class="select-style" id="tempb" onchange="tempnow()" >
 							<option>Celsius</option>
 							<option>Fahrenheit</option>
 						</select>
-						<input disabled="" id="tresult">
+						<input class= "inputs" disabled="" id="tresult">
 						<br>
-						<button type="button" onclick="tempnow()">Converta</button>
+						<button class="option-button" type="button" onclick="tempnow()">Converta</button>
 					</div>
-
+					<!-- peso -->
 					<div id="mass" style="display: none">
-						<select id="massa" onchange="massnow()">
+						<select  class="select-style" id="massa" onchange="massnow()">
 							<option>Tonelada</option>
 							<option>Kilograma</option>
 							<option>Grama</option>
 						</select>
-						<input type="number" id="minput" onkeyup="massnow()"> <br><br>
+						<input class= "inputs" type="number" id="minput" onkeyup="massnow()"> <br><br>
 
-						<select id="massb" onchange="massnow()">
-							<option>Tonelada/option>
+						<select  class="select-style" id="massb" onchange="massnow()">
+							<option>Tonelada</option>
 							<option>Kilograma</option>
 							<option>Grama</option>
 						</select>
-						<input disabled="" id="mresult"><br><br><br>
-						<button type="button" onclick="massnow()">Converta</button>
+						<input class= "inputs" disabled="" id="mresult"><br><br><br>
+						<button class="option-button" type="button" onclick="massnow()">Converta!</button>
 					</div>
 				</form>
 			</nav>

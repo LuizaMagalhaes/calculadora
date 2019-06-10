@@ -20,7 +20,12 @@ body {
 .container2 {
   display: inline-flex;
   align-items: baseline;
+	align-items: center;
+}
 
+.container3 {
+  display: table;
+	margin: auto;
 }
 
 .option-button {

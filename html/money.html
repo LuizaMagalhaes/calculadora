@@ -1,36 +1,46 @@
-<div class="jumbotron">
-  <div class="container">
-    <button class="option-button" onclick="location.href='calculator.html'">Inicio</button>
-   <h2>Conversor de moedas</h2>
-   <form class="form-inline">
-     <div class="form-group mb-2">
-        <input type="number" class="form-control" id="amount"/>
-     </div>
-     <div class="form-group mx-sm-3 mb-2">
-        <select class="form-control" id="currency-1" required>
-          <option>BRL</option>
-          <option>EUR</option>
-          <option>USD</option>
-        </select>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/calculator.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/converter.css">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container3">
+        <button class="option-button" onclick="location.href='calculator.html'">Inicio</button>
+      <h2>Conversor de moedas</h2>
+      <form class="form-inline">
+    
+          
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="number" class="form-control inputs" id="amount"/>
+            <select class="form-control select-style" id="currency-1" required>
+              <option>BRL</option>
+              <option>EUR</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label>converta para: </label>
+            <select class="form-control select-style" id="currency-2" required>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>BRL</option>
+            </select>
+          </div>
+        </form>
+        <div class="container2">
+          <button class="btn calc˜ulate-btn btn-primary mb-2 option-button">Resultado!</button>
+          <p class="result">
+            <span class="given-amount"></span>
+            <span class="base-currency"></span>
+            <span class="final-result"></span>
+            <span class="second-currency"></span>
+          </p>
+        </div>
       </div>
-      <div class="form-group mx-sm-3 mb-2">
-        <label>converta para: </label>
-        <select class="form-control" id="currency-2" required>
-          <option>EUR</option>
-          <option>USD</option>
-          <option>BRL</option>
-        </select>
-      </div>
-      <button class="btn calculate-btn btn-primary mb-2">Resultado!</button>
-    </form>
-    <div class="result">
-      <p>
-        <span class="given-amount"></span>
-        <span class="base-currency"></span>
-        <span class="final-result"></span>
-        <span class="second-currency"></span>
-      </p>
     </div>
-  </div>
-</div>
-<script type="text/javascript" src="../scripts/money.js"></script>
+    <script type="text/javascript" src="../scripts/money.js"></script>
+  </body>
+</html>
