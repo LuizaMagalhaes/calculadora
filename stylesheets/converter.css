@@ -7,14 +7,14 @@ nav {
 
 .instruction{
   font-size: 80%;
-  margin-bottom:  8px; 
+  margin-bottom:  8px;
 }
 
 .inputs {
-  height: 46px;	
-  width: 242px;	
-  border: 1px solid #E078D6;	
-  border-radius: 8px;	
+  height: 46px;
+  width: 242px;
+  border: 1px solid #E078D6;
+  border-radius: 8px;
   background-color: #ffffff;
   font-size: 14px;
 }
@@ -32,7 +32,7 @@ nav {
   .rte > input {
             display: inline;
             width: 300px;
-            margin-bottom: 10px;	
+            margin-bottom: 10px;
   }
 
   .amt > input {
@@ -65,15 +65,12 @@ nav {
   -webkit-appearance: none;
 }
 
-.select-style select:focus {
-  outline: none;
-}
-
 .result {
-  height: 46px;	
-  width: 242px;	
-  border: 1px solid #E078D6;	
-  border-radius: 8px;	
+  height: 46px;
+  width: 242px;
+  border: 1px solid #E078D6;
+  border-radius: 8px;
   background-color: #ffffff;
   font-size: 14px;
+  text-align: center;
 }
